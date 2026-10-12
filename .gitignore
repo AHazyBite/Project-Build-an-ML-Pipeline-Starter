@@ -145,3 +145,8 @@ mlruns/
 outputs/
 random_forest_dir/
 multirun/
+
+# Pipeline run outputs
+clean_sample.csv
+rf_config.json
+random_forest_dir/

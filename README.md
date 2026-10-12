@@ -6,6 +6,15 @@ to be retrained with the same cadence, necessitating an end-to-end pipeline that
 
 In this project you will build such a pipeline.
 
+## Project links
+
+- GitHub repository: https://github.com/AHazyBite/Project-Build-an-ML-Pipeline-Starter
+- Weights & Biases project: https://wandb.ai/bazatiyeh-western-governors-university/nyc_airbnb
+
+## Results
+
+The hyperparameter search tried `max_depth` of 10 and 50 with `n_estimators` of 100 and 200. The best validation MAE (34.13) came from `max_depth` 15 and `n_estimators` 100, so those values stay in `config.yaml`. That model is tagged `prod` in W&B. On the held-out test set it scored an MAE of 33.85 and an R² of 0.56, close to the validation result, so the model is not overfitting.
+
 ## Table of contents
 
 - [Preliminary steps](#preliminary-steps)
