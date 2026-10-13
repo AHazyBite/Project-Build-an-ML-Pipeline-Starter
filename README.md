@@ -23,7 +23,9 @@ The pipeline lineage graph:
 
 ## Results
 
-The hyperparameter search tried `max_depth` of 10 and 50 with `n_estimators` of 100 and 200. The best validation MAE (34.13) came from `max_depth` 15 and `n_estimators` 100, so those values stay in `config.yaml`. That model is tagged `prod` in W&B. On the held-out test set it scored an MAE of 33.85 and an R² of 0.56, close to the validation result, so the model is not overfitting.
+The hyperparameter search tried `max_depth` of 10 and 50 with `n_estimators` of 100 and 200. The best validation MAE (34.13) came from `max_depth` 15 and `n_estimators` 100, so those values stay in `config.yaml`.
+
+The final model was retrained with those settings on the latest data and logged as the `model_export` artifact, tagged `prod` in W&B. It scored a validation MAE of 32.42 and a test MAE of 33.63 (R² 0.57). The two are close, so the model is not overfitting.
 
 ## Table of contents
 
